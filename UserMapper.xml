@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="model.UserMapper">
+    <insert id="insertUser" parameterType="model.User">
+        INSERT INTO users (name, email) VALUES (#{name}, #{email});
+    </insert>
+
+    <select id="getAllUsers" resultType="model.User">
+        SELECT * FROM users;
+    </select>
+</mapper>
